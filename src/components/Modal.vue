@@ -2,6 +2,7 @@
     <teleport to="body">
         <div class="modal">
             <slot name="title" />
+            {{ props.subtitle }}
             <slot />
             <button>Hide modal</button>
         </div>
@@ -14,7 +15,17 @@ const slots = useSlots()
 
 console.log(slots.title())
 
+const props = defineProps({
+    subtitle: {
+        type: String,
+        default: 'No props'
+    }
+})
+
+console.log(props.subtitle)
+
 </script>
+
 <style scoped>
     .modal {
         background: beige;
