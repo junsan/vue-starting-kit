@@ -8,12 +8,14 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from './components/Home.vue';
 import PostView from './components/PostView.vue';
 import PostDetail from './components/PostDetail.vue'
+import Modals from './components/Modals.vue'
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', component: Home },
     { path: '/post', name: "posts", component: PostView },
+    { path: '/modal', name: "modal", component: Modals },
     { path: '/post-detail/:id', name: "post-detail", component: PostDetail },
     // Add more routes as needed
   ],
