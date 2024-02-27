@@ -1,5 +1,5 @@
 <template>
-    <h1>Setup Api</h1>
+    <h1>{{ title }}</h1>
     <button @click="add">+</button>
     <span>{{ counter }}</span>
     <button @click="minus">-</button>
@@ -10,6 +10,7 @@ import { ref } from 'vue'
 export default {
     setup() {
         const counter = ref(0)
+        const title = 'Setup Api'
 
         function add() {
             counter.value++
@@ -21,6 +22,7 @@ export default {
 
         return {
             counter,
+            title,
             add,
             minus
         }
