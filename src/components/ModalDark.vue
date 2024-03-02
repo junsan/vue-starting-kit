@@ -41,12 +41,14 @@ const changeVmodel = () => {
 
 <style scoped>
     .modal {
-        background: beige;
+        background-color: #333;
+        color: white;
         padding: 10px;
         position: absolute;
         left: 0;
         top: 0;
         height: 100%;
         width: 100%;
+        z-index: 1;
     }
 </style>
